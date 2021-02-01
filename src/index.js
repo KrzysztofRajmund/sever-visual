@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SeverApp from './components/Home/SeverApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SeverApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
