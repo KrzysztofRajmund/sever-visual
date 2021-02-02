@@ -37,9 +37,9 @@ const EntrancePage = () => {
         <a className="entrance-page" href="/sever">
         <div className="entrance-page__wrapper">
           <h1
-            data-text="EXPLORE"
+            data-text="sever"
           >
-            EXPLORE
+            sever
           </h1>
           <h5 className="entrance-page__wrapper--animation"> visual production</h5>
         </div>

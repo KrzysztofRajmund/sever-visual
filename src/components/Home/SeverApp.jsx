@@ -2,7 +2,7 @@ import React from "react";
 //router
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 //components
-// import FooterComponent from "../FooterComponent";
+import FooterComponent from "./FooterComponent";
 import LandingPage from './LandingPage';
 import EntrancePage from './EntrancePage';
 // import AboutUs from './../AboutUs/AboutUs';
@@ -24,7 +24,7 @@ const SeverApp = () => {
           <EntrancePage />
         </Route>
       </Switch>
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </Router>
   );
 };
