@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 //components
 // import FooterComponent from "../FooterComponent";
 import LandingPage from './LandingPage';
+import EntrancePage from './EntrancePage';
 // import AboutUs from './../AboutUs/AboutUs';
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
@@ -16,8 +17,11 @@ const SeverApp = () => {
         {/* <Route path="/kontakt">
           <Contact />
         </Route> */}
-        <Route path="/">
+        <Route path="/sever">
           <LandingPage />
+        </Route>
+        <Route path="/">
+          <EntrancePage />
         </Route>
       </Switch>
       {/* <FooterComponent /> */}
