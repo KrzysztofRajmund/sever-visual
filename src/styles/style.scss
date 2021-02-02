@@ -199,7 +199,7 @@
 .landing-page{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   height: 100vh;
 }
@@ -209,7 +209,6 @@
   top: -150%;
   left: 100%;
     z-index: 90;
-    flex: 50%;
     text-align: center;
     position: relative;
     padding: 20px 0px 20px 0px;
@@ -297,17 +296,17 @@
 :root {
   --primary: #d1fefc;
   --secondary: #ffe1e1;
-  --accent: #ffeb37;
+  --accent: #2d2d2d84;
 }
 .artist-card {
+  flex: 50%;
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1rem auto;
   margin: 0px;
   position: relative;
-  box-shadow: 0.75rem -0.5rem 0 var(--accent), 0 -0.5rem 0 var(--primary),
-  -0.8rem -1rem 0 var(--secondary);
+  box-shadow: inset 0rem 9rem 0 var(--accent)
 }
 
 .artist-card__img {
