@@ -1,16 +1,11 @@
-  
 import React from "react";
-//components
-// import AboutUs from './../AboutUs/AboutUs';
-// import Contact from './../Contact/Contact';
 
 const LandingPage = () => {
   return (
-    <React.Fragment>
-        <div>Hello Manchester</div>
-      {/* <AboutUs />
-      <Contact /> */}
-    </React.Fragment>
+    <div className="landing-page">
+      <div className="landing-page__button landing-page__button--digital" data-hover="цифровой" ><h1>Digital</h1></div>
+      <div className="landing-page__button landing-page__button--analog" data-hover="аналог"><h1>Analog</h1></div>
+    </div>
   );
 };
 
