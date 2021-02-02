@@ -205,6 +205,10 @@
 }
 
 .landing-page__digital, .landing-page__analog {
+  position:absolute;
+  top: -150%;
+  left: 100%;
+    z-index: 90;
     flex: 50%;
     text-align: center;
     position: relative;
@@ -250,7 +254,7 @@
 }
 
 
-.landing-page__digital:hover h1 {
+.artist-card:hover h1 {
     opacity: 0;
     // -webkit-transform: scale(0.3);
     // -moz-transform: scale(0.3);
@@ -259,7 +263,7 @@
     transform: scale(0.3);
 }
 
-.landing-page__digital:hover::before {
+.artist-card:hover .landing-page__digital::before {
     opacity: 1;
     // -webkit-transform: translate(0,0);
     // -moz-transform: translate(0,0);
@@ -276,17 +280,7 @@
 .landing-page__analog::before {
   content: attr(hover-analog);
 }
-
-.landing-page__analog:hover h1 {
-    opacity: 0;
-    // -webkit-transform: scale(0.3);
-    // -moz-transform: scale(0.3);
-    // -ms-transform: scale(0.3);
-    // -o-transform: scale(0.3);
-    transform: scale(0.3);
-}
-
- .landing-page__analog:hover::before {
+.artist-card:hover .landing-page__analog::before {
     opacity: 1;
     // -webkit-transform: translate(0,0);
     // -moz-transform: translate(0,0);
@@ -298,3 +292,57 @@
     // -o-transition-delay: .4s;
     transition-delay: .4s;
 }
+
+//LANDINGPAGE2!!!
+:root {
+  --primary: #d1fefc;
+  --secondary: #ffe1e1;
+  --accent: #ffeb37;
+}
+.artist-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1rem auto;
+  margin: 0px;
+  position: relative;
+  box-shadow: 0.75rem -0.5rem 0 var(--accent), 0 -0.5rem 0 var(--primary),
+  -0.8rem -1rem 0 var(--secondary);
+}
+
+.artist-card__img {
+  max-width: 100%;
+  display: block;
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+
+
+  .artist-card {
+    clip-path: circle(0%);
+    animation: circle-grow 2000ms 450ms forwards;
+
+    &:hover .artist-card__img {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .artist-card__img {
+    clip-path: polygon(
+      18.11% 16.5%,
+      50% 0%,
+      75% 50%,
+      54.09% 90.44%,
+      13.7% 63.94%
+    );
+    transition: clip-path 400ms ease-in-out;
+  }
+
+
+@keyframes circle-grow {
+  to {
+    clip-path: circle(100%);
+  }
+}
+
