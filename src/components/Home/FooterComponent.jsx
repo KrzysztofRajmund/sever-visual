@@ -32,8 +32,8 @@ const FooterComponent = () => {
             <div className="footer-container__logo">
             <img src={Logo} width="100px" height="auto"  alt="logo"/>
             </div>
-            <a className="footer-container__card footer-container__card--social-media" href="https://www.facebook.com/EmilioRestaurantSzczecin" target="_blank"><img src={Facebook} alt="facebook" width="30px" height="30px"/> </a>
-            <a className="footer-container__card footer-container__card--social-media" href="https://www.instagram.com/restauracja.emilio.szczecin/" target="_blank"><img src={Instagram} alt="instagram" width="30px" height="30px"/> </a>
+            <a className="footer-container__card footer-container__card--social-media" href="/" target="_blank"><img src={Facebook} alt="facebook" width="30px" height="30px"/> </a>
+            <a className="footer-container__card footer-container__card--social-media" href="/" target="_blank"><img src={Instagram} alt="instagram" width="30px" height="30px"/> </a>
             <div className="footer-bottom__title">
          Visual Production Company
      </div>
