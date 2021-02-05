@@ -37,14 +37,14 @@ const EntrancePage = () => {
 
   return (
       <React.Fragment>
-        <div className="nav-temporary">
+        {/* <div className="nav-temporary">
         <Link to="about-temporary" duration={650} spy={true} smooth={true}>
         <h2>About</h2>
             </Link>
         <Link to="footer-component" duration={650} spy={true} smooth={true}>
         <h2>Contact</h2>
             </Link>
-        </div>
+        </div> */}
         <a className="entrance-page" href="/sever">
         <div className="entrance-page__wrapper">
           <h1

@@ -7,6 +7,7 @@ import LandingPage from './LandingPage';
 import LandingPage2 from './LandingPage2';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
+import ScrollButton from "./ScrollButton";
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
@@ -28,6 +29,7 @@ const SeverApp = () => {
           <EntrancePage />
         </Route>
       </Switch>
+      <ScrollButton/>
       <AboutUs />
       <FooterComponent />
     </Router>
