@@ -37,7 +37,7 @@ const EntrancePage = () => {
 
   return (
       <React.Fragment>
-        <div className="contact">
+        <div className="nav-temporary">
         <Link to="about-temporary" duration={650} spy={true} smooth={true}>
         <h2>About</h2>
             </Link>
