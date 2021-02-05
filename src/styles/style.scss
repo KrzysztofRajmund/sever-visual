@@ -120,7 +120,7 @@
 
 //footer
 .footer-container{
-  border-top: 1px solid #7b7b7b;
+  border-top: 0.1px solid #7b7b7b36;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -130,36 +130,44 @@
 
 .footer-container__card{
   flex: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 50px;
+  padding: 30px;
   p {
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 6px;
       color: #b3b3b3;
+      a{
+        text-decoration: none;
+        color: #b3b3b3;
+        &:hover{
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.925);
+        }
+      }
   }
 
-  h5{
-      margin-bottom: 24px;
-      letter-spacing: 0.2em;
-      line-height: 1.2em;
-      font-weight: 600;
-      color: rgba(116, 116, 116, 0.708);
+  p:first-child{
+    font-weight: 800;
+  }
 
-      hr{
-          width: 100%;
-          height: 2px;
-          text-align: center;
-          background-color: #7b7b7b4c ;
-          border: transparent;
-      }
+  a{
+    margin-bottom: 16px;
+    &:hover{
+        text-decoration: none;
+        color: transparent; 
+}
   }
 
 }
 
 .footer-container__card .footer-container__card--social-media{
-  padding: 0px 0px 0px 10px;
-  display:inline-flex;
+  padding: 0px 5px 0px 5px;
+  display:inline-block;
   text-align: center;
   img{
       &:hover{
@@ -189,8 +197,8 @@
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 0.1em;
-  padding-top: 50px;
-  padding-left: 12px;
+  padding-top: 15px;
+  // padding-left: 12px;
 
 }
 
