@@ -6,7 +6,7 @@ import FooterComponent from "./FooterComponent";
 import LandingPage from './LandingPage';
 import LandingPage2 from './LandingPage2';
 import EntrancePage from './EntrancePage';
-// import AboutUs from './../AboutUs/AboutUs';
+import AboutUs from './../AboutUs/AboutUs';
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
@@ -28,6 +28,7 @@ const SeverApp = () => {
           <EntrancePage />
         </Route>
       </Switch>
+      <AboutUs />
       <FooterComponent />
     </Router>
   );

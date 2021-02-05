@@ -7,15 +7,15 @@ import Instagram from "../../assets/instagram-white.png";
 const FooterComponent = () => {
   return (
     <React.Fragment>
-      <footer className="footer-container">
+      <footer className="footer-container" id="footer-component">
         <div className="footer-container__card">
           <a
-            href="https://www.google.com/maps/place/CitiPark+75+Dale+Street+Manchester/@53.4807006,-2.234832,17z/data=!4m13!1m7!3m6!1s0x487bb1be86f0a4af:0xde14aab4e390b87e!2sChina+Ln,+Manchester,+UK!3b1!8m2!3d53.4807006!4d-2.2326433!3m4!1s0x487bb1bdd3ec6173:0x9cee7d5252a1c072!8m2!3d53.4799911!4d-2.2318487"
+            href="https://www.google.com/maps/place/Jacksons+Warehouse,+20+Tariff+St,+Manchester+M1+2FJ,+UK/@53.4815922,-2.2325703,17z/data=!4m8!1m2!2m1!1s17+Jacksons+Warehouse+manchester+uk!3m4!1s0x487bb1bc38c50163:0x54274fefdd123abe!8m2!3d53.4815657!4d-2.2305498"
             target="_blank"
           >
             <p>Manchester</p>
-            <p>China Lane</p>
-            <p>M1 3EZ</p>
+            <p>17 Jacksons Warehouse</p>
+            <p>20 Tariff Street</p>
           </a>
         </div>
         <div className="footer-container__card">
@@ -25,14 +25,14 @@ const FooterComponent = () => {
           <div>
             <a
               className="footer-container__card footer-container__card--social-media"
-              href="/"
+              href="https://vimeo.com/severvisual/"
               target="_blank"
             >
-              <img src={Vimeo} alt="vimeo" width="30px" height="30px" />{" "}
+              <img src={Vimeo} alt="vimeo" width="30px" height="30px" />
             </a>
             <a
               className="footer-container__card footer-container__card--social-media"
-              href="/"
+              href="https://www.instagram.com/sever_visual/"
               target="_blank"
             >
               <img src={Instagram} alt="instagram" width="30px" height="30px" />{" "}
@@ -46,11 +46,11 @@ const FooterComponent = () => {
           <address>
             <p>Contact</p>
             <p>
-              <a href="tel:044-508-224-177">+44 508 224 177</a>
+              <a href="tel:044-778-420-81-79">+44 778 420 81 79</a>
             </p>
             <p>
-              <a href="mailto:sever@gmail.com?&subject=Sever Visual&body=How can we help?">
-                sever@gmail.com
+              <a href="mailto:hello@sever-visual.co?&subject=Sever Visual&body=How can we help?">
+                hello@sever-visual.co
               </a>
             </p>
           </address>

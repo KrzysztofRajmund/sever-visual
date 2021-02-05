@@ -153,6 +153,7 @@
 
   p:first-child{
     font-weight: 800;
+    text-transform: uppercase;
   }
 
   a{
@@ -353,3 +354,33 @@
   }
 }
 
+//temporary contact
+.contact{
+  padding: 15px 0px 0px 50px;
+  width: fit-content;
+  a {
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+//temporary about
+
+.about{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px 0px 50px;
+  margin-bottom: 80px;
+  h2{
+    padding-bottom: 20px; 
+    width: 80%;
+  }
+
+  p{
+    width: 80%;
+  }
+
+}
