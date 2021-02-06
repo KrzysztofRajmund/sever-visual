@@ -3,7 +3,8 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div className="about" id="about-temporary">
-      <h2> SEVER cultured content creators.</h2>
+      <h2> SEVER VISUAL PRODUCTION co.</h2>
+      <p> cultured content creators</p>
       <p>SEVER is a specialist visual production company that creates bespoke
       digital and analog content that is tailored specifically for you, the
       brand.</p> 

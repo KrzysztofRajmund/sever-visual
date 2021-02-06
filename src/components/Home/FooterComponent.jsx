@@ -39,7 +39,7 @@ const FooterComponent = () => {
             </a>
           </div>
           <div className="footer-bottom__title">
-            ©2021 by Sever Visual Production
+            ©2021 by Sever Visual Production co.
           </div>
         </div>
         <div className="footer-container__card">
