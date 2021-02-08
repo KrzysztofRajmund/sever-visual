@@ -2,6 +2,8 @@
 import React, { useEffect, useState} from "react";
 //anime
 import anime from "animejs";
+//components
+import ScrollButton from "../Home/ScrollButton";
 
 
 const EntrancePage = () => {
@@ -46,6 +48,7 @@ const EntrancePage = () => {
           <h5 className="entrance-page__wrapper--animation"> visual production</h5>
         </div>
       </a>
+      <ScrollButton />
       </React.Fragment>
   );
 };

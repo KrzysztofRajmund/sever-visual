@@ -6,7 +6,9 @@ import FooterComponent from "./FooterComponent";
 import LandingPage from './LandingPage';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
-import ScrollButton from "./ScrollButton";
+import Subpage from './../Subpage/Subpage';
+import ProjectsList from './../Projects/ProjectsList';
+import Project from './../Projects/Project';
 import NavComponent from"./NavComponent";
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
@@ -20,6 +22,15 @@ const SeverApp = () => {
         {/* <Route path="/kontakt">
           <Contact />
         </Route> */}
+            <Route path="/sever/digital/still/project-one">
+          <Project />
+        </Route>
+           <Route path="/sever/digital/still">
+          <ProjectsList />
+        </Route>
+          <Route path="/sever/digital">
+          <Subpage />
+        </Route>
         <Route path="/sever">
           <LandingPage />
         </Route>
@@ -27,7 +38,6 @@ const SeverApp = () => {
           <EntrancePage />
         </Route>
       </Switch>
-      {/* <ScrollButton/> */}
       {/* <AboutUs /> */}
       <FooterComponent />
     </Router>

@@ -1,6 +1,6 @@
 import React from "react";
 //assets
-import Logo from "../../assets/logo.png";
+import LogoWhite from "../../assets/logo-white.png";
 import Vimeo from "../../assets/vimeo-white.png";
 import Instagram from "../../assets/instagram-white.png";
 
@@ -20,7 +20,7 @@ const FooterComponent = () => {
         </div>
         <div className="footer-container__card">
           <div className="footer-container__logo">
-            <img src={Logo} width="100px" height="auto" alt="logo" />
+            <img src={LogoWhite} width="100px" height="auto" alt="logo" />
           </div>
           <div>
             <a
