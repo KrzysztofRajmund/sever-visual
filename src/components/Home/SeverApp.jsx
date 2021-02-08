@@ -9,12 +9,12 @@ import AboutUs from './../AboutUs/AboutUs';
 import Subpage from './../Subpage/Subpage';
 import ProjectsList from './../Projects/ProjectsList';
 import Project from './../Projects/Project';
-import NavComponent from"./../Nav/NavComponent";
+import NavModal from"./../Nav/NavModal";
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
     <Router>
-      <NavComponent/>
+      <NavModal/>
       <Switch>
         {/* <Route path="/onas">
           <AboutUs />
