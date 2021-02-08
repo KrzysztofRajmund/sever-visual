@@ -9,7 +9,7 @@ import AboutUs from './../AboutUs/AboutUs';
 import Subpage from './../Subpage/Subpage';
 import ProjectsList from './../Projects/ProjectsList';
 import Project from './../Projects/Project';
-import NavComponent from"./NavComponent";
+import NavComponent from"./../Nav/NavComponent";
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
