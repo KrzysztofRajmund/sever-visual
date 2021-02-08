@@ -2,8 +2,7 @@
 import React, { useEffect, useState} from "react";
 //anime
 import anime from "animejs";
-//react-scroll
-import { Link } from "react-scroll";
+
 
 const EntrancePage = () => {
 
@@ -37,14 +36,6 @@ const EntrancePage = () => {
 
   return (
       <React.Fragment>
-        {/* <div className="nav-temporary">
-        <Link to="about-temporary" duration={650} spy={true} smooth={true}>
-        <h2>About</h2>
-            </Link>
-        <Link to="footer-component" duration={650} spy={true} smooth={true}>
-        <h2>Contact</h2>
-            </Link>
-        </div> */}
         <a className="entrance-page" href="/sever">
         <div className="entrance-page__wrapper">
           <h1
