@@ -7,10 +7,12 @@ import LandingPage from './LandingPage';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
 import ScrollButton from "./ScrollButton";
+import NavComponent from"./NavComponent";
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
     <Router>
+      <NavComponent/>
       <Switch>
         {/* <Route path="/onas">
           <AboutUs />
