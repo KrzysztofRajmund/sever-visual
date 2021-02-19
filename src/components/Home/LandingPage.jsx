@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import DigitalImageThree from "../../assets/digital-image3.JPG";
-import DigitalImageTwo from "../../assets/digital-image2.jpg";
+import React, { useEffect, useState } from 'react';
+import DigitalImageThree from '../../assets/digital-image3.JPG';
+import DigitalImageTwo from '../../assets/digital-image2.jpg';
 //react-router
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -12,31 +12,37 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="landing-page">
-      <Link to="/sever/digital">
-        <div class="landing-page__card">
-          <div className="landing-page__digital" hover-digital="цифровой">
-            <h1>
-            <span>Digital</span>
-            <span>reefffds</span>
-            <span>dsfcsd</span>
-            <span>weesdc</span>
-            <span>Digital</span>
-            <span>reefffds</span>
-            <span>dsfcsd</span>
-            <span>weesdc</span>
-            <span>weesdc</span>
-            <span>Digital</span>
-            </h1>
-   
-          </div>
+    <div className='landing-page'>
+      <Link to='/sever/digital'>
+        <div
+          class='landing-page__card'
+          onMouseOver={() =>
+            props.mouseMoveHandler(
+              'цифровой',
+              document.getElementById('digital')
+            )
+          }
+          onMouseLeave={() =>
+            props.mouseMoveHandler(
+              'Digital',
+              document.getElementById('digital')
+            )
+          }
+        >
+          <h1 id='digital'>Digital</h1>
         </div>
       </Link>
-      <Link to="/sever/analog">
-        <div class="landing-page__card">
-          <div className="landing-page__analog" hover-analog="аналог">
-            <h1>Analog</h1>
-          </div>
+      <Link to='/sever/analog'>
+        <div
+          class='landing-page__card'
+          onMouseOver={() =>
+            props.mouseMoveHandler('аналог', document.getElementById('analog'))
+          }
+          onMouseLeave={() =>
+            props.mouseMoveHandler('Analog', document.getElementById('analog'))
+          }
+        >
+          <h1 id='analog'>Analog</h1>
         </div>
       </Link>
     </div>

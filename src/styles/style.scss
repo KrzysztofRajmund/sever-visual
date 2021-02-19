@@ -388,6 +388,12 @@
   animation: circle-grow 2000ms 450ms forwards;
 }
 
+@keyframes circle-grow {
+  to {
+    clip-path: circle(100%);
+  }
+}
+
 .landing-page a:first-child:hover {
   background-image: url('../assets/digital-image3.JPG');
   background-repeat: no-repeat;
@@ -400,127 +406,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-@keyframes circle-grow {
-  to {
-    clip-path: circle(100%);
-  }
-}
-
-.landing-page__digital,
-.landing-page__analog {
-  z-index: 90;
-  text-align: center;
-  position: relative;
-  padding: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  h1 {
-    // -webkit-transition: 0.6s;
-    // -moz-transition: 0.6s;
-    // -o-transition: 0.6s;
-    transition: 0.6s;
-    // -webkit-transition-delay: 0.2s;
-    // -moz-transition-delay: 0.2s;
-    // -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-    background-color: transparent;
-  }
-
-  h1 {
-    position: relative;
-    height: 50px;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-  }
-  h1 span {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-  }
-
-  h1:hover span {
-    animation: shuffle steps(10) 1s infinite;
-    // animation-iteration-count: 5;
-  }
-}
-
-.landing-page__digital::before,
-.landing-page__analog::before {
-  position: absolute;
-  top: 0.67em;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  padding: 20px;
-  // -webkit-transition: .4s,opacity .6s;
-  // -moz-transition: .4s,opacity .6s;
-  // -o-transition: .4s,opacity .6s;
-  transition: 0.4s, opacity 0.6s;
-  transition-delay: 2s;
-  // -webkit-transform: translate(-150%,0);
-  // -moz-transform: translate(-150%,0);
-  // -ms-transform: translate(-150%,0);
-  // -o-transform: translate(-150%,0);
-  transform: translate(-10%, 0);
-}
-
-//DIGITAL!!!
-.landing-page__digital::before {
-  content: attr(hover-digital);
-}
-
-.landing-page__card:hover {
-  h1 {
-    opacity: 0;
-    // -webkit-transform: scale(0.3);
-    // -moz-transform: scale(0.3);
-    // -ms-transform: scale(0.3);
-    // -o-transform: scale(0.3);
-    transform: scale(0.3);
-  }
-}
-
-.landing-page__card:hover .landing-page__digital::before {
-  opacity: 1;
-  // -webkit-transform: translate(0,0);
-  // -moz-transform: translate(0,0);
-  // -ms-transform: translate(0,0);
-  // -o-transform: translate(0,0);
-  transform: translate(0, 0);
-  // -webkit-transition-delay: .4s;
-  // -moz-transition-delay: .4s;
-  // -o-transition-delay: .4s;
-  transition-delay: 0.4s;
-}
-
-//ANALOG!!!
-.landing-page__analog::before {
-  content: attr(hover-analog);
-}
-.landing-page__card:hover .landing-page__analog::before {
-  opacity: 1;
-  // -webkit-transform: translate(0,0);
-  // -moz-transform: translate(0,0);
-  // -ms-transform: translate(0,0);
-  // -o-transform: translate(0,0);
-  transform: translate(0, 0);
-  // -webkit-transition-delay: .4s;
-  // -moz-transition-delay: .4s;
-  // -o-transition-delay: .4s;
-  transition-delay: 0.4s;
-}
-
-//landing-page 2
-.container2 {
-  margin: 100px;
 }
 
 //subpage && subpage scramble text
