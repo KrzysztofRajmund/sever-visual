@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 //router
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //components
-import FooterComponent from "./FooterComponent";
-import LandingPage from './LandingPage';
+import FooterComponent from './FooterComponent';
+import LandingPage from './LandingPage2';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
 import Subpage from './../Subpage/Subpage';
 import ProjectsList from './../Projects/ProjectsList';
 import Project from './../Projects/Project';
-import NavModal from"./../Nav/NavModal";
+import NavModal from './../Nav/NavModal';
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
   return (
     <Router>
-      <NavModal/>
+      <NavModal />
       <Switch>
         {/* <Route path="/onas">
           <AboutUs />
@@ -22,19 +22,19 @@ const SeverApp = () => {
         {/* <Route path="/kontakt">
           <Contact />
         </Route> */}
-            <Route path="/sever/digital/still/project-one">
+        <Route path='/sever/digital/still/project-one'>
           <Project />
         </Route>
-           <Route path="/sever/digital/still">
+        <Route path='/sever/digital/still'>
           <ProjectsList />
         </Route>
-          <Route path="/sever/digital">
+        <Route path='/sever/digital'>
           <Subpage />
         </Route>
-        <Route path="/sever">
+        <Route path='/sever'>
           <LandingPage />
         </Route>
-        <Route path="/">
+        <Route path='/'>
           <EntrancePage />
         </Route>
       </Switch>
