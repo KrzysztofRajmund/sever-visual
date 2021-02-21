@@ -1,32 +1,77 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 //react-router
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 //components
-import ScrollButton from "../Home/ScrollButton";
+import ScrollButton from '../Home/ScrollButton';
 
 const ProjectsList = () => {
+  const container = document.getElementsByClassName('projects-list')[0];
+  const section = document.getElementsByClassName('projects-list__card');
+  let currentPix = window.pageYOffset;
+  let currentCurve = window.pageYOffset;
+  console.log(currentPix, 'currentPix');
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => setLoading(true), []);
+
+  if (loading) {
+    //skew whole page animation
+    const skewImage = () => {
+      const newPix = window.pageYOffset;
+      const skewPix = newPix - currentPix;
+      const speed = skewPix * 0.15;
+
+      container.style.transform = `skewY(${speed}deg)`;
+      currentPix = newPix;
+      requestAnimationFrame(skewImage);
+    };
+    skewImage();
+    //curve each section animation
+    // const curveImage = () => {
+    //   const newCurve = window.pageYOffset;
+    //   const curve = newCurve - currentCurve;
+    //   const curveSize = curve;
+    // for (var i = 0; i < section.length; i++) {
+    //   section[i].style.clipPath = `circle(120vh at 50% ${-20 - curveSize}vh)`;
+    //   //  `circle(${curveSize}vh at ${
+    //   //   (30 / 100) * curveSize
+    //   // } ${curveSize}vh)`;
+    // }
+
+    // for (var i = 0; i < section.length; i++) {
+    //   section[
+    //     i
+    //   ].style.clipPath = `polygon(-10% -10%, 95% 5%, 95% 95%, 5% 95%)`;
+    // }
+
+    // for (var i = 0; i < section.length; i++) {
+    //   section[i].style.transform = `translate(0px, ${-curveSize * 2}px)`;
+    // }
+
+    //   currentCurve = newCurve;
+    //   requestAnimationFrame(curveImage);
+    // };
+    // curveImage();
+  }
+
   return (
     <React.Fragment>
-      <div className="projects-list">
-        <Link to="/sever/digital/still/project-one">
-          <div className="projects-list__card">
+      <div className='projects-list'>
+        <Link to='/sever/digital/still/project-one'>
+          <section className='projects-list__card projects-list__card--one'>
             <h1>Client 1</h1>
-          </div>
+          </section>
         </Link>
         <Link>
-          <div className="projects-list__card">
+          <section className=' projects-list__card projects-list__card--two'>
             <h1>Client 2</h1>
-          </div>
+          </section>
         </Link>
         <Link>
-          <div className="projects-list__card">
+          <section className='projects-list__card projects-list__card--three'>
             <h1>Client 3</h1>
-          </div>
-        </Link>
-        <Link>
-          <div className="projects-list__card">
-            <h1>Client 4</h1>
-          </div>
+          </section>
         </Link>
       </div>
       <ScrollButton />
