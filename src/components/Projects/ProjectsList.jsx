@@ -6,7 +6,7 @@ import ScrollButton from '../Home/ScrollButton';
 
 const ProjectsList = () => {
   const container = document.getElementsByClassName('projects-list')[0];
-  const section = document.getElementsByClassName('projects-list__card');
+  const section = document.getElementsByClassName('projects-list__filter')[0];
   let currentPix = window.pageYOffset;
   let currentCurve = window.pageYOffset;
   console.log(currentPix, 'currentPix');
@@ -23,6 +23,7 @@ const ProjectsList = () => {
       const speed = skewPix * 0.15;
 
       container.style.transform = `skewY(${speed}deg)`;
+      // section.style.filter = `invert(${speed * 200}%)`;
       currentPix = newPix;
       requestAnimationFrame(skewImage);
     };
@@ -58,6 +59,7 @@ const ProjectsList = () => {
   return (
     <React.Fragment>
       <div className='projects-list'>
+        {/* <div className='projects-list__filter'>HELLLO</div> */}
         <Link to='/sever/digital/still/project-one'>
           <section className='projects-list__card projects-list__card--one'>
             <h1>Client 1</h1>

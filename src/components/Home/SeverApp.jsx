@@ -161,7 +161,7 @@ const SeverApp = () => {
         </Route>
       </Switch>
       {/* <AboutUs /> */}
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </Router>
   );
 };
