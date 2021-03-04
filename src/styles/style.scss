@@ -18,17 +18,160 @@ body {
 }
 
 //navigation
+
+//nav-icon
 .nav-icon {
+  z-index: 95;
   position: absolute;
-  top: 2%;
+  top: 8%;
   right: 5%;
   background-color: transparent;
-  z-index: 90;
   cursor: pointer;
-  img {
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
+}
+
+.nav-icon__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  width: 50px;
+  cursor: pointer;
+}
+
+.nav-icon__span {
+  z-index: 95;
+  display: block;
+  background: #f5f5f5;
+  transition: all 0.3s;
+  position: relative;
+  margin-top: 8px;
+}
+.nav-icon__span-first {
+  width: 80%;
+  height: 2px;
+  float: right;
+}
+
+.nav-icon__span-second {
+  width: 60%;
+  height: 2px;
+  float: right;
+}
+
+.nav-icon__span-third {
+  width: 90%;
+  height: 2px;
+  float: right;
+}
+
+.active span:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease 0.7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease 0.7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 1px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 1px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 22px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    width: 90%;
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 19px;
+    transform: rotate(0);
+  }
+  100% {
+    width: 80%;
+    bottom: 19px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 22px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
