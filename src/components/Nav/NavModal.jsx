@@ -6,7 +6,7 @@ import LogoWhite from '../../assets/logo-white.png';
 import Vimeo from '../../assets/vimeo-white.png';
 import Instagram from '../../assets/instagram-white.png';
 
-const NavModal = () => {
+const NavModal = (props) => {
   const [modal, setModal] = useState(false);
 
   const openModal = () => {
@@ -25,18 +25,87 @@ const NavModal = () => {
       </div>
       {modal ? (
         <div>
-          <div className='nav-modal'>
-            <Link to='/sever/digital' onClick={() => setModal(false)}>
-              <h1>digital</h1>
+          <div className='nav-modal' onClick={() => setModal(false)}>
+            <Link
+              to='/sever/digital'
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('digital')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'Digital',
+                  document.getElementById('digital')
+                )
+              }
+            >
+              <h2 id='digital'>Digital</h2>
             </Link>
-            <Link>
-              <h1>analog</h1>
+            <Link
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('analog')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'analog',
+                  document.getElementById('analog')
+                )
+              }
+            >
+              <h2 id='analog'>analog</h2>
             </Link>
-            <Link>
-              <h1>tales</h1>
+            <Link
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цrtрй',
+                  document.getElementById('tales')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'tales',
+                  document.getElementById('tales')
+                )
+              }
+            >
+              <h2 id='tales'>tales</h2>
             </Link>
-            <Link>
-              <h1>contact</h1>
+            <Link
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('about')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'about',
+                  document.getElementById('about')
+                )
+              }
+            >
+              <h2 id='about'>about</h2>
+            </Link>
+            <Link
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('contact')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'contact',
+                  document.getElementById('contact')
+                )
+              }
+            >
+              <h2 id='contact'>contact</h2>
             </Link>
           </div>
           <footer className='nav-footer'>

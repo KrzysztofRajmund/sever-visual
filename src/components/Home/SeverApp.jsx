@@ -152,7 +152,7 @@ const SeverApp = () => {
   };
   return (
     <Router>
-      <NavModal />
+      <NavModal scrambleTextHandler={scrambleTextHandler} />
       <Switch>
         {/* <Route path="/onas">
           <AboutUs />

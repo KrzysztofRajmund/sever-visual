@@ -18,7 +18,7 @@ const LandingPage = (props) => {
           class='landing-page__card'
           onMouseOver={() =>
             props.scrambleTextHandler(
-              'цифровой',
+              'цивой',
               document.getElementById('digital')
             )
           }
