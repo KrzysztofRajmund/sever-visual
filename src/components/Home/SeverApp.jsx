@@ -12,9 +12,25 @@ import Project from './../Projects/Project';
 import NavModal from './../Nav/NavModal';
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
-  const mouseMoveHandler = (title, id) => {
-    console.log(title, id);
-
+  // //enter shuffle
+  // const mouseEnterShuffle = (title, elementWithID) => {
+  //   console.log(elementWithID);
+  //   const shuffleSpan = document.getElementsByClassName('shuffle__span');
+  //   for (var i = 0; i < shuffleSpan.length; i++) {
+  //     shuffleSpan[i].classList.remove('shuffle__active-out');
+  //   }
+  //   elementWithID.innerHTML = title;
+  // };
+  // //out shuffle
+  // const mouseOutShuffle = (title, elementWithID) => {
+  //   const shuffleSpan = document.getElementsByClassName('shuffle__span');
+  //   for (var i = 0; i < shuffleSpan.length; i++) {
+  //     shuffleSpan[i].classList.add('shuffle__active-out');
+  //   }
+  //   elementWithID.innerHTML = title;
+  // };
+  //scramble text
+  const scrambleTextHandler = (title, id) => {
     var _createClass = (function () {
       function defineProperties(target, props) {
         for (var i = 0; i < props.length; i++) {
@@ -44,7 +60,7 @@ const SeverApp = () => {
         _classCallCheck(this, TextScramble);
 
         this.el = el;
-        this.chars = '!<>-_\\/[]{}—=+*^?#________';
+        this.chars = 'ア-トデジ';
         this.update = this.update.bind(this);
       }
 
@@ -151,10 +167,15 @@ const SeverApp = () => {
           <ProjectsList />
         </Route>
         <Route path='/sever/digital'>
-          <Subpage />
+          <Subpage
+            //shuffle animation type
+            // mouseEnterShuffle={mouseEnterShuffle}
+            // mouseOutShuffle={mouseOutShuffle}
+            scrambleTextHandler={scrambleTextHandler}
+          />
         </Route>
         <Route path='/sever'>
-          <LandingPage mouseMoveHandler={mouseMoveHandler} />
+          <LandingPage scrambleTextHandler={scrambleTextHandler} />
         </Route>
         <Route path='/'>
           <EntrancePage />

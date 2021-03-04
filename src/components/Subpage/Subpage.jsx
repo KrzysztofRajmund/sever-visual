@@ -2,66 +2,85 @@ import React from 'react';
 //react-router
 import { Link } from 'react-router-dom';
 
-const Subpage = () => {
-  const mouseEnterHandler = () => {
-    console.log('I entered');
-    const classTest = document.getElementsByClassName('classTest');
-    for (var i = 0; i < classTest.length; i++) {
-      classTest[i].classList.remove('active');
-    }
-    console.log(classTest, 'class removing');
-    const test = document.getElementById('test');
-    test.innerHTML = 'неподвижный';
-  };
-
-  const mouseLeaveHandler = () => {
-    console.log('I left');
-    const classTest = document.getElementsByClassName('classTest');
-    for (var i = 0; i < classTest.length; i++) {
-      classTest[i].classList.add('active');
-    }
-    console.log(classTest, 'class adding');
-
-    const test = document.getElementById('test');
-    test.innerHTML = 'Still';
-  };
-
+const Subpage = (props) => {
   return (
     <div className='subpage'>
       <Link to='/sever/digital/still'>
-        <div
+        {/* //shuffle animation type */}
+        {/* <div
           className='subpage__card'
-          onMouseOver={mouseEnterHandler}
-          onMouseOut={mouseLeaveHandler}
+          onMouseOver={() =>
+            props.mouseEnterShuffle(
+              'неподвижный',
+              document.getElementById('shuffle__subpage--still')
+            )
+          }
+          onMouseOut={() =>
+            props.mouseOutShuffle(
+              'still',
+              document.getElementById('shuffle__subpage--still')
+            )
+          }
         >
-          <h2>
-            <span className='classTest' id='test'>
+          <h2 className='shuffle__section'>
+            <span className='shuffle__span' id='shuffle__subpage--still'>
               still
             </span>
-            <span className='classTest'>sti9l*</span>
-            <span className='classTest'>s6ill-=</span>
-            <span className='classTest'>ytil#</span>
-            <span className='classTest'>ytil#</span>
-            <span className='classTest'>ytil#</span>
-            <span className='classTest'>ytil#</span>
-            <span className='classTest'>russian</span>
-            <span className='classTest'>still</span>
-            <span className='classTest'>непо_</span>
-            <span className='classTest'>непо_</span>
-            <span className='classTest'>sti9l*</span>
-            <span className='classTest'>неподв</span>
-            <span className='classTest'>вижный</span>
-            <span className='classTest'>неп57!$%^жный</span>
-            <span className='classTest'>неподвижный</span>
+            <span className='shuffle__span'>sti9l*</span>
+            <span className='shuffle__span'>s6ill-=</span>
+            <span className='shuffle__span'>ytil#</span>
+            <span className='shuffle__span'>ytil#</span>
+            <span className='shuffle__span'>ytil#</span>
+            <span className='shuffle__span'>ytil#</span>
+            <span className='shuffle__span'>russian</span>
+            <span className='shuffle__span'>still</span>
+            <span className='shuffle__span'>непо_</span>
+            <span className='shuffle__span'>непо_</span>
+            <span className='shuffle__span'>sti9l*</span>
+            <span className='shuffle__span'>неподв</span>
+            <span className='shuffle__span'>вижный</span>
+            <span className='shuffle__span'>неп57!$%^жный</span>
+            <span className='shuffle__span'>неподвижный</span>
           </h2>
+        </div> */}
+        <div
+          className='subpage__card'
+          onMouseOver={() =>
+            props.scrambleTextHandler(
+              'цифрй',
+              document.getElementById('digital')
+            )
+          }
+          onMouseLeave={() =>
+            props.scrambleTextHandler(
+              'Digital',
+              document.getElementById('digital')
+            )
+          }
+        >
+          <h2 id='digital'>Digital</h2>
         </div>
       </Link>
       <Link>
-        <div className='subpage__card'>
-          <h1>motion</h1>
+        <div
+          className='subpage__card'
+          onMouseOver={() =>
+            props.scrambleTextHandler(
+              'цифой',
+              document.getElementById('motion')
+            )
+          }
+          onMouseLeave={() =>
+            props.scrambleTextHandler(
+              'Motion',
+              document.getElementById('motion')
+            )
+          }
+        >
+          <h2 id='motion'>Motion</h2>
         </div>
       </Link>
-      <Link>
+      {/* <Link>
         <div className='subpage__card'>
           <h1>3d</h1>
         </div>
@@ -70,7 +89,7 @@ const Subpage = () => {
         <div className='subpage__card'>
           <h1>art</h1>
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };

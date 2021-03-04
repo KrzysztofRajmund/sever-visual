@@ -17,13 +17,13 @@ const LandingPage = (props) => {
         <div
           class='landing-page__card'
           onMouseOver={() =>
-            props.mouseMoveHandler(
+            props.scrambleTextHandler(
               'цифровой',
               document.getElementById('digital')
             )
           }
           onMouseLeave={() =>
-            props.mouseMoveHandler(
+            props.scrambleTextHandler(
               'Digital',
               document.getElementById('digital')
             )
@@ -36,10 +36,16 @@ const LandingPage = (props) => {
         <div
           class='landing-page__card'
           onMouseOver={() =>
-            props.mouseMoveHandler('аналог', document.getElementById('analog'))
+            props.scrambleTextHandler(
+              'аналог',
+              document.getElementById('analog')
+            )
           }
           onMouseLeave={() =>
-            props.mouseMoveHandler('Analog', document.getElementById('analog'))
+            props.scrambleTextHandler(
+              'Analog',
+              document.getElementById('analog')
+            )
           }
         >
           <h1 id='analog'>Analog</h1>
