@@ -154,9 +154,9 @@ const SeverApp = () => {
     <Router>
       <NavModal scrambleTextHandler={scrambleTextHandler} />
       <Switch>
-        {/* <Route path="/onas">
+        <Route path='/sever/about'>
           <AboutUs />
-        </Route> */}
+        </Route>
         {/* <Route path="/kontakt">
           <Contact />
         </Route> */}
@@ -182,7 +182,7 @@ const SeverApp = () => {
         </Route>
       </Switch>
       {/* <AboutUs /> */}
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </Router>
   );
 };

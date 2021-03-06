@@ -44,6 +44,7 @@ const NavModal = (props) => {
               <h2 id='digital'>Digital</h2>
             </Link>
             <Link
+              to='/sever/analog'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -60,6 +61,7 @@ const NavModal = (props) => {
               <h2 id='analog'>analog</h2>
             </Link>
             <Link
+              to='/sever/tales'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цrtрй',
@@ -76,6 +78,7 @@ const NavModal = (props) => {
               <h2 id='tales'>tales</h2>
             </Link>
             <Link
+              to='/sever/about'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -92,6 +95,7 @@ const NavModal = (props) => {
               <h2 id='about'>about</h2>
             </Link>
             <Link
+              to='/sever/contact'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',

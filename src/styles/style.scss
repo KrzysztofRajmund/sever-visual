@@ -394,7 +394,7 @@ body {
   }
 }
 
-//temporary about
+//about
 
 .about {
   text-align: center;
@@ -403,7 +403,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0px 50px 0px 50px;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
+  margin-top: 150px;
   h2 {
     width: 30%;
     font-size: 18px;
@@ -725,6 +726,20 @@ body {
   background-position: center;
 }
 
+//MEDIA
+@media screen and (max-width: 980px) {
+  //about
+  .about {
+    h2 {
+      width: 50%;
+    }
+
+    p {
+      width: 50%;
+    }
+  }
+}
+
 @media screen and (max-width: 570px) {
   //footer
   .footer-container {
@@ -738,6 +753,19 @@ body {
 
     .footer-bottom__title {
       padding-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  //about
+  .about {
+    h2 {
+      width: 70%;
+    }
+
+    p {
+      width: 70%;
     }
   }
 }
