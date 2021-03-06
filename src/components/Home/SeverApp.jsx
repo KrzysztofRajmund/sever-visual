@@ -7,6 +7,7 @@ import LandingPage from './LandingPage';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
 import Contact from './../Contact/Contact';
+import Tales from './../Tales/Tales';
 import Subpage from './../Subpage/Subpage';
 import ProjectsList from './../Projects/ProjectsList';
 import Project from './../Projects/Project';
@@ -160,6 +161,9 @@ const SeverApp = () => {
         </Route>
         <Route path='/sever/contact'>
           <Contact />
+        </Route>
+        <Route path='/sever/tales'>
+          <Tales />
         </Route>
         <Route path='/sever/digital/still/project-one'>
           <Project />
