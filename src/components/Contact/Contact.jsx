@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 //anime
 import anime from 'animejs';
 
-const AboutUs = () => {
+const Contact = () => {
   const [loading, setLoading] = useState(false);
   let firstText = `SEVER is a specialist visual production company that creates bespoke
         digital and analog content that is tailored specifically for you, the
@@ -92,4 +92,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Contact;
