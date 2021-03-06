@@ -385,17 +385,17 @@ body {
   }
 }
 
-//temporary contact
-.nav-temporary {
-  padding: 15px 0px 0px 50px;
-  width: fit-content;
-  a {
-    cursor: pointer;
-  }
+//about && contact
+
+//contact
+.first-section,
+.fourth-section {
+  margin-top: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 18px;
 }
-
 //about
-
 .about {
   text-align: center;
   display: flex;

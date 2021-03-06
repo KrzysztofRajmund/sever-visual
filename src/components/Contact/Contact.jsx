@@ -4,25 +4,32 @@ import anime from 'animejs';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  let firstText = `SEVER is a specialist visual production company that creates bespoke
-        digital and analog content that is tailored specifically for you, the
-        brand.`;
-
-  let secondText = `The foundation of our craft is pride in our heritage. Our team of Baltic
-        expats are artistically cultivated in the best work from the east to the
-        west of the planet.`;
-  let thirdText = `Our aim is to provide quality niche content that separates ourselves and
-        our clients from the cliche and mediocre.`;
+  //address
+  let firstText = `MANCHESTER`;
+  let secondText = `79 Sorting House`;
+  let thirdText = ` 83 Newton Street`;
   let i = 0;
   let j = 0;
   let k = 0;
-  let speed = 50;
+  //contact
+  let fourthText = `CONTACT`;
+  let fifthText = `+44 778 420 81 79`;
+  let sixthText = `+44 744 690 14 44`;
+  let seventhText = `hello@sever-visual.co`;
+  let l = 0;
+  let m = 0;
+  let n = 0;
+  let o = 0;
+  let speed = 70;
   useEffect(() => {
     setLoading(true);
     setTimeout(() => typeWriter('first-section', firstText, i), 4000);
-    setTimeout(() => typeWriter('second-section', secondText, j), 17000);
-    setTimeout(() => typeWriter('third-section', thirdText, k), 32000);
-    // awaitingInterval();
+    setTimeout(() => typeWriter('second-section', secondText, j), 5000);
+    setTimeout(() => typeWriter('third-section', thirdText, k), 6000);
+    setTimeout(() => typeWriter('fourth-section', fourthText, l), 9000);
+    setTimeout(() => typeWriter('fifth-section', fifthText, m), 10000);
+    setTimeout(() => typeWriter('sixth-section', sixthText, n), 11000);
+    setTimeout(() => typeWriter('seventh-section', seventhText, o), 12000);
   }, []);
 
   if (loading) {
@@ -69,25 +76,17 @@ const Contact = () => {
     }
   };
 
-  // const awaitingInterval = () => {
-  //   var awaitingElement = document.getElementById('about__awaiting');
-  //   console.log(awaitingElement, 'awaiting elment');
-  //   if (awaitingElement.style.display === 'block') {
-  //     awaitingElement.style.display = 'none';
-  //   } else {
-  //     awaitingElement.style.display = 'block';
-  //   }
-  //   // setInterval(awaitingInterval, 1000);
-  // };
-
   return (
     <div className='about'>
       <h2> SEVER VISUAL PRODUCTION co.</h2>
       <p> cultured content creators</p>
-      <p id='first-section'></p>
-      {/* <p id='about__awaiting'>|</p> */}
+      <p id='first-section' className='first-section'></p>
       <p id='second-section'></p>
       <p id='third-section'></p>
+      <p id='fourth-section' className='fourth-section'></p>
+      <p id='fifth-section'></p>
+      <p id='sixth-section'></p>
+      <p id='seventh-section'></p>
     </div>
   );
 };

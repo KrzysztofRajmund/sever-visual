@@ -6,6 +6,7 @@ import FooterComponent from './FooterComponent';
 import LandingPage from './LandingPage';
 import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
+import Contact from './../Contact/Contact';
 import Subpage from './../Subpage/Subpage';
 import ProjectsList from './../Projects/ProjectsList';
 import Project from './../Projects/Project';
@@ -157,9 +158,9 @@ const SeverApp = () => {
         <Route path='/sever/about'>
           <AboutUs />
         </Route>
-        {/* <Route path="/kontakt">
+        <Route path='/sever/contact'>
           <Contact />
-        </Route> */}
+        </Route>
         <Route path='/sever/digital/still/project-one'>
           <Project />
         </Route>
