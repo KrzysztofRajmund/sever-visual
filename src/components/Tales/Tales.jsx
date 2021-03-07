@@ -18,22 +18,60 @@ const Tales = () => {
       {/* nav section */}
       <section className='tales__nav'>
         <article className='tales__nav-article'>
-          <Link to='2015' duration={650} spy={true} smooth={true}>
-            <p>3rd of Dec 2015</p>
+          <Link to='2015' duration={650} spy={true} smooth={true} offset={0}>
+            <p>12.2015</p>
           </Link>
-          <small>|</small>
+          <Link to='2015' duration={650} spy={true} smooth={true} offset={0}>
+            <div className='tales__nav-article--radio'></div>
+          </Link>
+
           {/* hr */}
           <hr className='tales__hr' />
-          <span>Nasty Gal Campaign</span>
+          <Link to='2015' duration={650} spy={true} smooth={true} offset={0}>
+            <div>Nasty Gal Campaign</div>
+          </Link>
         </article>
         <article className='tales__nav-article'>
-          <Link to='2017' duration={650} spy={true} smooth={true}>
-            <p>6th of June 2017</p>
+          <Link to='2017' duration={650} spy={true} smooth={true} offset={0}>
+            <p>10.2017</p>
           </Link>
-          <small>|</small>
+          <Link to='2017' duration={650} spy={true} smooth={true} offset={0}>
+            <div className='tales__nav-article--radio'></div>
+          </Link>
+
           {/* hr */}
           <hr className='tales__hr' />
-          <span>Nasty Gal Campaign</span>
+          <Link to='2017' duration={650} spy={true} smooth={true} offset={0}>
+            <div>New Arrival Campaign</div>
+          </Link>
+        </article>
+        <article className='tales__nav-article'>
+          <Link to='2020' duration={650} spy={true} smooth={true} offset={0}>
+            <p>12.2020</p>
+          </Link>
+          <Link to='2020' duration={650} spy={true} smooth={true} offset={0}>
+            <div className='tales__nav-article--radio'></div>
+          </Link>
+
+          {/* hr */}
+          <hr className='tales__hr' />
+          <Link to='2020' duration={650} spy={true} smooth={true} offset={0}>
+            <div>Nasty Gal Campaign</div>
+          </Link>
+        </article>
+        <article className='tales__nav-article'>
+          <Link to='2021' duration={650} spy={true} smooth={true} offset={0}>
+            <p>09.2021</p>
+          </Link>
+          <Link to='2021' duration={650} spy={true} smooth={true} offset={0}>
+            <div className='tales__nav-article--radio'></div>
+          </Link>
+
+          {/* hr */}
+          <hr className='tales__hr' />
+          <Link to='2021' duration={650} spy={true} smooth={true} offset={0}>
+            <div>Nasty Gal Campaign</div>
+          </Link>
         </article>
       </section>
       {/* articles sections */}
@@ -49,6 +87,19 @@ const Tales = () => {
           <div className='tales__article-text'> I am article 2017</div>
           <div className='tales__article-img'>
             <img src={DigitalImageTwo} alt='image' />
+          </div>
+        </article>
+        <article className='tales__article' id='2020'>
+          <div className='tales__article-img'>
+            <img src={DigitalImageThree} alt='image' />
+          </div>
+
+          <div className='tales__article-text'> I am article 2020</div>
+        </article>
+        <article className='tales__article' id='2021'>
+          <div className='tales__article-text'> I am article 2021</div>
+          <div className='tales__article-img'>
+            <img src={DigitalImageThree} alt='image' />
           </div>
         </article>
       </section>
