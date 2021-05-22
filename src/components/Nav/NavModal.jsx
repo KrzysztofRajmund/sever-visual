@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //react-router
 import { Link } from 'react-router-dom';
 //assets
-import LogoWhite from '../../assets/logo-white.png';
+import Logo from '../../assets/logo-red.png';
 import Vimeo from '../../assets/vimeo-white.png';
 import Instagram from '../../assets/instagram-white.png';
 
@@ -27,7 +27,7 @@ const NavModal = (props) => {
         <div>
           <div className='nav-modal' onClick={() => setModal(false)}>
             <Link
-              to='/sever/digital'
+              to='/digital'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -44,7 +44,7 @@ const NavModal = (props) => {
               <h2 id='digital'>Digital</h2>
             </Link>
             <Link
-              to='/sever/analog'
+              to='/analog'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -61,7 +61,7 @@ const NavModal = (props) => {
               <h2 id='analog'>analog</h2>
             </Link>
             <Link
-              to='/sever/tales'
+              to='/tales'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цrtрй',
@@ -78,7 +78,7 @@ const NavModal = (props) => {
               <h2 id='tales'>tales</h2>
             </Link>
             <Link
-              to='/sever/about'
+              to='/about'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -95,7 +95,7 @@ const NavModal = (props) => {
               <h2 id='about'>about</h2>
             </Link>
             <Link
-              to='/sever/contact'
+              to='/contact'
               onMouseOver={() =>
                 props.scrambleTextHandler(
                   'цифрй',
@@ -115,7 +115,7 @@ const NavModal = (props) => {
           <footer className='nav-footer'>
             <div className='nav-footer__card'>
               <div className='nav-footer__logo'>
-                <img src={LogoWhite} width='70px' height='auto' alt='logo' />
+                <img src={Logo} width='70px' height='auto' alt='logo' />
               </div>
               <div>
                 <a

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Subpage = (props) => {
   return (
     <div className='subpage'>
-      <Link to='/sever/digital/still'>
+      <Link to='/digital/still'>
         {/* //shuffle animation type */}
         {/* <div
           className='subpage__card'

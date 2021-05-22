@@ -1,21 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+@import '_variables';
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #1d1d1d;
-  // background-color: #fafafa;
-  color: #f5f5f5;
-  // color: #1d1d1d;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $fontPrimary;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #000;
-  color: #f5f5f5;
+  font-family: $fontPrimary;
+  background-color: $primaryColor;
+  color: $secondaryColor;
   overflow: visible;
 }
 
@@ -192,8 +187,10 @@ body {
     padding: 10px 25px 10px 25px;
     text-transform: uppercase;
     width: 250px;
+    color: $secondaryColor;
     &:hover {
       text-decoration: none;
+      color: $secondaryColor;
     }
   }
 }
@@ -245,24 +242,28 @@ body {
 }
 
 .nav-footer__title {
-  color: rgba(255, 255, 255, 0.925);
+  color: $secondaryColor;
   text-align: center;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 9px;
+  font-weight: 600;
   letter-spacing: 0.1em;
   padding-top: 5px;
 }
 
 //footer
+
 .footer-container {
   border-top: 0.1px solid #7b7b7b36;
   display: flex;
   justify-content: center;
   width: 100%;
   height: auto;
+  min-height: 300px;
 }
 
 .footer-container__card {
+  background-color: $secondaryColor;
   flex: 33.33%;
   display: flex;
   flex-direction: column;
@@ -271,6 +272,7 @@ body {
   text-align: center;
   padding: 30px;
   p {
+    background-color: $secondaryColor;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 6px;
@@ -400,17 +402,21 @@ body {
 }
 //about
 .about {
+  color: $secondaryColor;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 50px 0px 50px;
-  margin-bottom: 150px;
-  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  min-height: 100vh;
   h2 {
     width: 30%;
+    color: $logoColor;
     font-size: 18px;
+    font-weight: 600;
     margin-bottom: 0px;
   }
 
@@ -418,11 +424,15 @@ body {
     padding-bottom: 25px;
     font-style: italic;
     font-size: 14px;
+    font-weight: 600;
+    opacity: 1;
   }
 
   p {
     width: 30%;
-    font-size: 12px;
+    font-size: 12.5px;
+    font-weight: 600;
+    opacity: 0.7;
   }
 }
 
@@ -447,7 +457,7 @@ body {
 
 .entrance-page {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $fontPrimary;
   font-size: 24px;
   height: 100vh;
   width: 100%;
@@ -534,6 +544,7 @@ body {
   width: 400px;
   height: 400px;
   background-color: transparent;
+  color: $secondaryColor;
   // border: 2px solid #fff;
   border: 2px solid #1d1d1d;
   // grid-template-columns: repeat(5, 1fr);
@@ -554,6 +565,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  #digital {
+    background-color: transparent;
+    color: $primaryColor;
+
+    span {
+      background-color: transparent;
+      color: $primaryColor;
+    }
+  }
 }
 
 .landing-page a:last-child:hover {
@@ -561,6 +581,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  #analog {
+    background-color: transparent;
+    color: $primaryColor;
+
+    span {
+      background-color: transparent;
+      color: $primaryColor;
+    }
+  }
 }
 
 //animation shuffle text
@@ -620,6 +649,7 @@ body {
 }
 
 .subpage__card {
+  color: $secondaryColor;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -627,7 +657,7 @@ body {
   width: 300px;
   height: 400px;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid $secondaryColor;
   margin: 0px;
   text-transform: uppercase;
   overflow: hidden;
@@ -671,6 +701,7 @@ body {
 // }
 
 .projects-list__card {
+  color: $primaryColor;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -712,8 +743,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
   padding: 0px;
   margin: 0px;
 }
@@ -722,16 +751,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background-color: transparent;
   border: 2px solid #fff;
   margin: 0px;
   text-transform: uppercase;
-  background-image: url('../assets/digital-image3.JPG');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  // background-image: url('../assets/digital-image3.JPG');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+
+  img {
+    width: auto;
+    height: 100vh;
+  }
 }
 
 //TALES
@@ -743,6 +777,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: $secondaryColor;
+  font-weight: 600;
+  .active {
+    color: $logoColor;
+  }
 }
 .tales__nav {
   position: sticky;
@@ -765,8 +804,8 @@ body {
     letter-spacing: 1px;
   }
   .active div.tales__nav-article--radio {
-    background-color: #ff0909;
-    border: 2px solid #ff1212;
+    background-color: $logoColor;
+    border: 2px solid $logoColor;
   }
 
   // .active div {
@@ -873,6 +912,7 @@ body {
   //footer
   .footer-container {
     flex-direction: column;
+    min-height: 100vh;
   }
   .footer-container__card {
     flex: 100%;

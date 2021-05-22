@@ -60,14 +60,14 @@ const ProjectsList = () => {
     <React.Fragment>
       <div className='projects-list'>
         {/* <div className='projects-list__filter'>HELLLO</div> */}
-        <Link to='/sever/digital/still/project-one'>
+        <Link to='/digital/still/phix'>
           <section className='projects-list__card projects-list__card--one'>
-            <h1>Client 1</h1>
+            <h1>Phix</h1>
           </section>
         </Link>
         <Link>
           <section className=' projects-list__card projects-list__card--two'>
-            <h1>Client 2</h1>
+            <h1>Sneakers</h1>
           </section>
         </Link>
         <Link>

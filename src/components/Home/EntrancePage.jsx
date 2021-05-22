@@ -35,7 +35,7 @@ const EntrancePage = () => {
     <React.Fragment>
       <a className='entrance-page' href='/sever'>
         <div className='entrance-page__wrapper'>
-          <h1 data-text='sever'>sever visual</h1>
+          <h1 data-text='sever'>sever</h1>
           <h5 className='entrance-page__wrapper--animation'>
             {' '}
             visual production

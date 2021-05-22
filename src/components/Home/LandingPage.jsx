@@ -13,7 +13,7 @@ const LandingPage = (props) => {
 
   return (
     <div className='landing-page'>
-      <Link to='/sever/digital'>
+      <Link to='/digital'>
         <div
           class='landing-page__card'
           onMouseOver={() =>
@@ -32,7 +32,7 @@ const LandingPage = (props) => {
           <h1 id='digital'>Digital</h1>
         </div>
       </Link>
-      <Link to='/sever/analog'>
+      <Link to='/analog'>
         <div
           class='landing-page__card'
           onMouseOver={() =>

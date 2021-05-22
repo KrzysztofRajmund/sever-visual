@@ -156,22 +156,22 @@ const SeverApp = () => {
     <Router>
       <NavModal scrambleTextHandler={scrambleTextHandler} />
       <Switch>
-        <Route path='/sever/about'>
+        <Route path='/about'>
           <AboutUs />
         </Route>
-        <Route path='/sever/contact'>
+        <Route path='/contact'>
           <Contact />
         </Route>
-        <Route path='/sever/tales'>
+        <Route path='/tales'>
           <Tales />
         </Route>
-        <Route path='/sever/digital/still/project-one'>
+        <Route path='/digital/still/phix'>
           <Project />
         </Route>
-        <Route path='/sever/digital/still'>
+        <Route path='/digital/still'>
           <ProjectsList />
         </Route>
-        <Route path='/sever/digital'>
+        <Route path='/digital'>
           <Subpage
             //shuffle animation type
             // mouseEnterShuffle={mouseEnterShuffle}
@@ -179,12 +179,12 @@ const SeverApp = () => {
             scrambleTextHandler={scrambleTextHandler}
           />
         </Route>
-        <Route path='/sever'>
+        <Route path='/'>
           <LandingPage scrambleTextHandler={scrambleTextHandler} />
         </Route>
-        <Route path='/'>
+        {/* <Route path='/'>
           <EntrancePage />
-        </Route>
+        </Route> */}
       </Switch>
       {/* <AboutUs /> */}
       <FooterComponent />
