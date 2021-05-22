@@ -168,6 +168,9 @@ const SeverApp = () => {
         <Route path='/digital/still/phix'>
           <Project />
         </Route>
+        <Route path='/digital/still/sneakers'>
+          <Project />
+        </Route>
         <Route path='/digital/still'>
           <ProjectsList />
         </Route>

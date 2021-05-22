@@ -4,37 +4,35 @@ import { Link } from 'react-router-dom';
 //components
 import ScrollButton from '../Home/ScrollButton';
 //json
-import imagesData2 from '../../imagesData2.json';
-import imageTest from '../../assets/img/phix-2.jpg';
+import imagesData from '../../imagesData.json';
+
 const Project = () => {
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+
+  let windowLocation = window.location.pathname.split('/');
 
   useEffect(() => {
-    setLoading(false);
+    setData(
+      imagesData.items.filter(
+        (x) => x.client === windowLocation[windowLocation.length - 1]
+      )
+    );
   }, []);
-
+  console.log(window.location.pathname);
   return (
     <React.Fragment>
-      {loading ? (
-        'loading'
-      ) : (
-        <div className='project'>
-          {imagesData2.images.map((image) => {
+      <div className='project'>
+        {data &&
+          data.map((image) => {
             return (
-              <div key={image.id} className='gallery-image'>
+              <div className='project__card' key={image.id}>
                 <img src={image.url} alt={`image-${image.id}`} />
               </div>
             );
           })}
-          {/* <div className='project__card'>
-          <img src={image} alt='' />
-        </div> */}
-        </div>
-      )}
-
+      </div>
       <ScrollButton />
     </React.Fragment>
   );
 };
-
 export default Project;

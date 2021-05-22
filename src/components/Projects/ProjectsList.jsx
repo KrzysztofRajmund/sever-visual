@@ -65,7 +65,7 @@ const ProjectsList = () => {
             <h1>Phix</h1>
           </section>
         </Link>
-        <Link>
+        <Link to='/digital/still/sneakers'>
           <section className=' projects-list__card projects-list__card--two'>
             <h1>Sneakers</h1>
           </section>
