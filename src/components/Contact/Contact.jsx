@@ -20,16 +20,16 @@ const Contact = () => {
   let m = 0;
   let n = 0;
   let o = 0;
-  let speed = 70;
+  let speed = 30;
   useEffect(() => {
     setLoading(true);
     setTimeout(() => typeWriter('first-section', firstText, i), 4000);
-    setTimeout(() => typeWriter('second-section', secondText, j), 5000);
-    setTimeout(() => typeWriter('third-section', thirdText, k), 6000);
-    setTimeout(() => typeWriter('fourth-section', fourthText, l), 9000);
-    setTimeout(() => typeWriter('fifth-section', fifthText, m), 10000);
-    setTimeout(() => typeWriter('sixth-section', sixthText, n), 11000);
-    setTimeout(() => typeWriter('seventh-section', seventhText, o), 12000);
+    setTimeout(() => typeWriter('second-section', secondText, j), 4500);
+    setTimeout(() => typeWriter('third-section', thirdText, k), 5500);
+    setTimeout(() => typeWriter('fourth-section', fourthText, l), 7500);
+    setTimeout(() => typeWriter('fifth-section', fifthText, m), 9000);
+    setTimeout(() => typeWriter('sixth-section', sixthText, n), 10000);
+    setTimeout(() => typeWriter('seventh-section', seventhText, o), 11000);
   }, []);
 
   if (loading) {

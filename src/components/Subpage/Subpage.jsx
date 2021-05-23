@@ -3,11 +3,54 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Subpage = (props) => {
+  console.log(props, 'props');
   return (
     <div className='subpage'>
-      <Link to='/digital/still'>
-        {/* //shuffle animation type */}
-        {/* <div
+      {props.digital && (
+        <>
+          <Link to='/digital/still'>
+            <div
+              className='subpage__card'
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('still')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'Still',
+                  document.getElementById('still')
+                )
+              }
+            >
+              <h2 id='still'>Still</h2>
+            </div>
+          </Link>
+          <Link to='/digital/motion'>
+            <div
+              className='subpage__card'
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифой',
+                  document.getElementById('motion')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'Motion',
+                  document.getElementById('motion')
+                )
+              }
+            >
+              <h2 id='motion'>Motion</h2>
+            </div>
+          </Link>
+        </>
+      )}
+      {/* <Link to='/digital/still'> */}
+      {/* //shuffle animation type */}
+      {/* <div
           className='subpage__card'
           onMouseOver={() =>
             props.mouseEnterShuffle(
@@ -43,25 +86,19 @@ const Subpage = (props) => {
             <span className='shuffle__span'>неподвижный</span>
           </h2>
         </div> */}
-        <div
+      {/* <div
           className='subpage__card'
           onMouseOver={() =>
-            props.scrambleTextHandler(
-              'цифрй',
-              document.getElementById('digital')
-            )
+            props.scrambleTextHandler('цифрй', document.getElementById('still'))
           }
           onMouseLeave={() =>
-            props.scrambleTextHandler(
-              'Digital',
-              document.getElementById('digital')
-            )
+            props.scrambleTextHandler('Still', document.getElementById('still'))
           }
         >
-          <h2 id='digital'>Digital</h2>
+          <h2 id='still'>Still</h2>
         </div>
       </Link>
-      <Link>
+      <Link to='/digital/motion'>
         <div
           className='subpage__card'
           onMouseOver={() =>
@@ -79,7 +116,7 @@ const Subpage = (props) => {
         >
           <h2 id='motion'>Motion</h2>
         </div>
-      </Link>
+      </Link> */}
       {/* <Link>
         <div className='subpage__card'>
           <h1>3d</h1>
@@ -90,6 +127,48 @@ const Subpage = (props) => {
           <h1>art</h1>
         </div>
       </Link> */}
+      {props.analog && (
+        <>
+          <Link to='/analog/still'>
+            <div
+              className='subpage__card'
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифрй',
+                  document.getElementById('still')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'Still',
+                  document.getElementById('still')
+                )
+              }
+            >
+              <h2 id='still'>Still</h2>
+            </div>
+          </Link>
+          <Link to='/analog/motion'>
+            <div
+              className='subpage__card'
+              onMouseOver={() =>
+                props.scrambleTextHandler(
+                  'цифой',
+                  document.getElementById('motion')
+                )
+              }
+              onMouseLeave={() =>
+                props.scrambleTextHandler(
+                  'Motion',
+                  document.getElementById('motion')
+                )
+              }
+            >
+              <h2 id='motion'>Motion</h2>
+            </div>
+          </Link>
+        </>
+      )}
     </div>
   );
 };

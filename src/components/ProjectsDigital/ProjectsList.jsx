@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+//react-player
+import ReactPlayer from 'react-player/lazy';
 //react-router
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 //components
 import ScrollButton from '../Home/ScrollButton';
 
@@ -59,22 +61,58 @@ const ProjectsList = () => {
   return (
     <React.Fragment>
       <div className='projects-list'>
-        {/* <div className='projects-list__filter'>HELLLO</div> */}
-        <Link to='/digital/still/phix'>
-          <section className='projects-list__card projects-list__card--one'>
-            <h1>Phix</h1>
-          </section>
-        </Link>
-        <Link to='/digital/still/sneakers'>
-          <section className=' projects-list__card projects-list__card--two'>
-            <h1>Sneakers</h1>
-          </section>
-        </Link>
-        <Link>
-          <section className='projects-list__card projects-list__card--three'>
-            <h1>Client 3</h1>
-          </section>
-        </Link>
+        {window.location.pathname === '/digital/still' ? (
+          <>
+            <Link to='/digital/still/phix'>
+              <section className='still projects-list__card projects-list__card--one'>
+                <h1>Phix</h1>
+              </section>
+            </Link>
+            <Link to='/digital/still/sneakers'>
+              <section className=' still projects-list__card projects-list__card--two'>
+                <h1>Sneakers</h1>
+              </section>
+            </Link>
+            <Link>
+              <section className='still projects-list__card projects-list__card--three'>
+                <h1>Client 3</h1>
+              </section>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link>
+              <section className='motion projects-list__card projects-list__card--one'>
+                <h1>Phix</h1>
+                <ReactPlayer
+                  controls={false}
+                  className='motion-video'
+                  url='https://vimeo.com/542589746'
+                />
+              </section>
+            </Link>
+            <Link>
+              <section className='motion projects-list__card projects-list__card--one'>
+                <h1>Art of Laura</h1>
+                <ReactPlayer
+                  controls={false}
+                  className='motion-video'
+                  url='https://vimeo.com/509803591'
+                />
+              </section>
+            </Link>
+            <Link>
+              <section className='motion projects-list__card projects-list__card--one'>
+                <h1>Phix box</h1>
+                <ReactPlayer
+                  controls={false}
+                  className='motion-video'
+                  url='https://vimeo.com/510009771'
+                />
+              </section>
+            </Link>
+          </>
+        )}
       </div>
       <ScrollButton />
     </React.Fragment>

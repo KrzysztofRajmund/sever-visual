@@ -9,8 +9,10 @@ import AboutUs from './../AboutUs/AboutUs';
 import Contact from './../Contact/Contact';
 import Tales from './../Tales/Tales';
 import Subpage from './../Subpage/Subpage';
-import ProjectsList from './../Projects/ProjectsList';
-import Project from './../Projects/Project';
+import ProjectsListDigital from '../ProjectsDigital/ProjectsList';
+import ProjectDigital from '../ProjectsDigital/Project';
+import ProjectsListAnalog from '../ProjectsAnalog/ProjectsList';
+import ProjectAnalog from '../ProjectsAnalog/Project';
 import NavModal from './../Nav/NavModal';
 // import Contact from './../Contact/Contact';
 const SeverApp = () => {
@@ -165,17 +167,67 @@ const SeverApp = () => {
         <Route path='/tales'>
           <Tales />
         </Route>
+        {/* PROJECT DIGITAL */}
         <Route path='/digital/still/phix'>
-          <Project />
+          <ProjectDigital />
         </Route>
         <Route path='/digital/still/sneakers'>
-          <Project />
+          <ProjectDigital />
         </Route>
+        <Route path='/digital/motion/phix'>
+          <ProjectDigital />
+        </Route>
+        <Route path='/digital/motion/culainwood'>
+          <ProjectDigital />
+        </Route>
+        <Route path='/digital/motion/artoflaura'>
+          <ProjectDigital />
+        </Route>
+        {/* PROJECT DIGITAL */}
+        {/* PROJECT ANALOG */}
+        <Route path='/analog/still/goldenteam'>
+          <ProjectAnalog />
+        </Route>
+        <Route path='/analog/still/raincity'>
+          <ProjectAnalog />
+        </Route>
+        <Route path='/analog/still/rodrigo'>
+          <ProjectAnalog />
+        </Route>
+        <Route path='/analog/motion/phix'>
+          <ProjectAnalog />
+        </Route>
+        <Route path='/analog/motion/culainwood'>
+          <ProjectAnalog />
+        </Route>
+        <Route path='/analog/motion/artoflaura'>
+          <ProjectAnalog />
+        </Route>
+        {/* PROJECT ANALOG */}
         <Route path='/digital/still'>
-          <ProjectsList />
+          <ProjectsListDigital />
+        </Route>
+        <Route path='/digital/motion'>
+          <ProjectsListDigital />
+        </Route>
+        <Route path='/analog/still'>
+          <ProjectsListAnalog />
+        </Route>
+        <Route path='/analog/motion'>
+          <ProjectsListAnalog />
         </Route>
         <Route path='/digital'>
           <Subpage
+            //shuffle animation type
+            // mouseEnterShuffle={mouseEnterShuffle}
+            // mouseOutShuffle={mouseOutShuffle}
+            digital='digital'
+            scrambleTextHandler={scrambleTextHandler}
+          />
+        </Route>
+        <Route path='/analog'>
+          <Subpage
+            analog='analog'
             //shuffle animation type
             // mouseEnterShuffle={mouseEnterShuffle}
             // mouseOutShuffle={mouseOutShuffle}

@@ -11,6 +11,11 @@ const NavModal = (props) => {
 
   const openModal = () => {
     setModal(!modal);
+    if (!modal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
   };
   return (
     <React.Fragment>
@@ -24,8 +29,8 @@ const NavModal = (props) => {
         </div>
       </div>
       {modal ? (
-        <div>
-          <div className='nav-modal' onClick={() => setModal(false)}>
+        <div className='nav-container'>
+          <div className='nav-modal' onClick={openModal}>
             <Link
               to='/digital'
               onMouseOver={() =>

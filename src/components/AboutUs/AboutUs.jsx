@@ -16,12 +16,12 @@ const AboutUs = () => {
   let i = 0;
   let j = 0;
   let k = 0;
-  let speed = 50;
+  let speed = 30;
   useEffect(() => {
     setLoading(true);
     setTimeout(() => typeWriter('first-section', firstText, i), 4000);
-    setTimeout(() => typeWriter('second-section', secondText, j), 17000);
-    setTimeout(() => typeWriter('third-section', thirdText, k), 32000);
+    setTimeout(() => typeWriter('second-section', secondText, j), 10000);
+    setTimeout(() => typeWriter('third-section', thirdText, k), 18000);
     // awaitingInterval();
   }, []);
 
