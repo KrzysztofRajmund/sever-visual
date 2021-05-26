@@ -80,7 +80,7 @@ const NavModal = (props) => {
                 )
               }
             >
-              <h2 id='tales'>tales</h2>
+              <h2 id='tales'>tale</h2>
             </Link>
             <Link
               to='/about'
