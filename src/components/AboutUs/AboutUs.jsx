@@ -6,23 +6,31 @@ const AboutUs = () => {
   const [loading, setLoading] = useState(false);
   let firstText = `SEVER is a specialist visual production company that creates bespoke
         digital and analog content that is tailored specifically for you, the
-        brand.`;
+        brand`;
 
   let secondText = `The foundation of our craft is pride in our heritage. Our team of Baltic
         expats are artistically cultivated in the best work from the east to the
-        west of the planet.`;
+        west of the planet`;
   let thirdText = `Our aim is to provide quality niche content that separates ourselves and
-        our clients from the cliche and mediocre.`;
+        our clients from the cliche and mediocre`;
   let i = 0;
   let j = 0;
   let k = 0;
   let speed = 30;
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => typeWriter('first-section', firstText, i), 4000);
-    setTimeout(() => typeWriter('second-section', secondText, j), 10000);
-    setTimeout(() => typeWriter('third-section', thirdText, k), 18000);
-    // awaitingInterval();
+    setTimeout(
+      () => typeWriter('first-about', firstText, i, 'about__first-blink'),
+      4000
+    );
+    setTimeout(
+      () => typeWriter('second-about', secondText, j, 'about__second-blink'),
+      10000
+    );
+    setTimeout(
+      () => typeWriter('third-about', thirdText, k, 'about__third-blink'),
+      18000
+    );
   }, []);
 
   if (loading) {
@@ -61,7 +69,10 @@ const AboutUs = () => {
     });
   }
 
-  const typeWriter = (id, text, index) => {
+  const typeWriter = (id, text, index, blinkClass) => {
+    setTimeout(() => {
+      document.getElementById(id).classList.remove(blinkClass);
+    }, 5000);
     if (index < text.length) {
       document.getElementById(id).innerHTML += text.charAt(index);
       index++;
@@ -69,25 +80,13 @@ const AboutUs = () => {
     }
   };
 
-  // const awaitingInterval = () => {
-  //   var awaitingElement = document.getElementById('about__awaiting');
-  //   console.log(awaitingElement, 'awaiting elment');
-  //   if (awaitingElement.style.display === 'block') {
-  //     awaitingElement.style.display = 'none';
-  //   } else {
-  //     awaitingElement.style.display = 'block';
-  //   }
-  //   // setInterval(awaitingInterval, 1000);
-  // };
-
   return (
     <div className='about'>
       <h2> SEVER VISUAL PRODUCTION co.</h2>
       <p> cultured content creators</p>
-      <p id='first-section'></p>
-      {/* <p id='about__awaiting'>|</p> */}
-      <p id='second-section'></p>
-      <p id='third-section'></p>
+      <p id='first-about' className='about__first-blink'></p>
+      <p id='second-about' className='about__second-blink'></p>
+      <p id='third-about' className='about__third-blink'></p>
     </div>
   );
 };

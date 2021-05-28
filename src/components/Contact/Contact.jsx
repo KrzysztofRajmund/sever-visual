@@ -23,13 +23,24 @@ const Contact = () => {
   let speed = 30;
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => typeWriter('first-section', firstText, i), 4000);
-    setTimeout(() => typeWriter('second-section', secondText, j), 4500);
-    setTimeout(() => typeWriter('third-section', thirdText, k), 5500);
-    setTimeout(() => typeWriter('fourth-section', fourthText, l), 7500);
-    setTimeout(() => typeWriter('fifth-section', fifthText, m), 9000);
-    setTimeout(() => typeWriter('sixth-section', sixthText, n), 10000);
-    setTimeout(() => typeWriter('seventh-section', seventhText, o), 11000);
+    setTimeout(
+      () => typeWriter('first-contact', firstText, i, 'contact__first-blink'),
+      4000
+    );
+    setTimeout(() => typeWriter('second-contact', secondText, j, null), 4500);
+    setTimeout(() => typeWriter('third-contact', thirdText, k, null), 5500);
+    setTimeout(
+      () =>
+        typeWriter('fourth-contact', fourthText, l, 'contact__fourth-blink'),
+      7500
+    );
+    setTimeout(() => typeWriter('fifth-contact', fifthText, m, null), 9000);
+    setTimeout(() => typeWriter('sixth-contact', sixthText, n, null), 10000);
+    setTimeout(
+      () =>
+        typeWriter('seventh-contact', seventhText, o, 'contact__seventh-blink'),
+      11000
+    );
   }, []);
 
   if (loading) {
@@ -68,7 +79,12 @@ const Contact = () => {
     });
   }
 
-  const typeWriter = (id, text, index) => {
+  const typeWriter = (id, text, index, blinkClass) => {
+    if (blinkClass !== null) {
+      setTimeout(() => {
+        document.getElementById(id).classList.remove(blinkClass);
+      }, 2000);
+    }
     if (index < text.length) {
       document.getElementById(id).innerHTML += text.charAt(index);
       index++;
@@ -77,16 +93,19 @@ const Contact = () => {
   };
 
   return (
-    <div className='about'>
+    <div className='contact'>
       <h2> SEVER VISUAL PRODUCTION co.</h2>
       <p> cultured content creators</p>
-      <p id='first-section' className='first-section'></p>
-      <p id='second-section'></p>
-      <p id='third-section'></p>
-      <p id='fourth-section' className='fourth-section'></p>
-      <p id='fifth-section'></p>
-      <p id='sixth-section'></p>
-      <p id='seventh-section'></p>
+      <p id='first-contact' className='contact__first-blink first-contact'></p>
+      <p id='second-contact'></p>
+      <p id='third-contact'></p>
+      <p
+        id='fourth-contact'
+        className='contact__fourth-blink fourth-contact'
+      ></p>
+      <p id='fifth-contact'></p>
+      <p id='sixth-contact'></p>
+      <p id='seventh-contact' className='contact__seventh-blink'></p>
     </div>
   );
 };

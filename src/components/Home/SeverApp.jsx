@@ -8,6 +8,7 @@ import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
 import Contact from './../Contact/Contact';
 import Tales from './../Tales/Tales';
+import TalesArticle from './../Tales/TalesArticle';
 import Subpage from './../Subpage/Subpage';
 import ProjectsListDigital from '../ProjectsDigital/ProjectsList';
 import ProjectDigital from '../ProjectsDigital/Project';
@@ -164,9 +165,13 @@ const SeverApp = () => {
         <Route path='/contact'>
           <Contact />
         </Route>
+        <Route path='/tales/:id'>
+          <TalesArticle />
+        </Route>
         <Route path='/tales'>
           <Tales />
         </Route>
+
         {/* PROJECT DIGITAL */}
         <Route path='/digital/still/phix'>
           <ProjectDigital />

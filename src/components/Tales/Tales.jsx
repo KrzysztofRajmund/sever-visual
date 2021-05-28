@@ -81,7 +81,10 @@ const Tales = () => {
             <img src={DigitalImageThree} alt='image' />
           </div>
 
-          <div className='tales__article-text'> I am article 2015</div>
+          <div className='tales__article-text'>
+            {' '}
+            I am article 2015<a href='/tales/2015'>read more...</a>
+          </div>
         </article>
         <article className='tales__article' id='2017'>
           <div className='tales__article-text'> I am article 2017</div>
