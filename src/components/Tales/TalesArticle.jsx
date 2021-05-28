@@ -4,14 +4,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 //components
 import ScrollButton from '../Home/ScrollButton';
-
-import image from '../../assets/digital-image3.JPG';
+//tales data
+import talesData from '../../talesData.json';
 
 const TalesArticle = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
+  console.log(talesData.items.slice(1, talesData.items.length));
   return (
     <React.Fragment>
       <div className='tales-article'>
@@ -21,7 +22,7 @@ const TalesArticle = () => {
             data-aos-duration='1000'
             data-aos-easing='ease-in-out'
             data-aos='zoom-in'
-            src={image}
+            src={talesData.items[0].url}
             alt='image-article'
           />
           <article
@@ -35,6 +36,16 @@ const TalesArticle = () => {
             fundraising and evaluation
           </article>
         </div>
+        {talesData.items
+          .slice(1, talesData.items.length)
+          .filter((x) => x.tale === 'goldenteam')
+          .map((tale) => {
+            return (
+              <div className='tales-article__card' key={tale.id}>
+                <img src={tale.url} alt={`image-${tale.tale}`} />
+              </div>
+            );
+          })}
       </div>
       <ScrollButton />
     </React.Fragment>

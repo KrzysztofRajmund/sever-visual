@@ -4,89 +4,89 @@
             "id": 1,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam.jpg"
         },
         {
             "id": 2,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-2.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-2.jpg"
         },
         {
             "id": 3,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-3.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-3.jpg"
         },
         {
             "id": 4,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-4.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-4.jpg"
         },
         {
             "id": 5,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
+            "tale": "goldenteam",
             "title": "rezerwacja",
             "subtitle": "Book a table",
-            "url": "/images/phix-5.jpg"
+            "url": "/tales/tales-goldenteam-5.jpg"
         },
         {
             "id": 6,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
+            "tale": "goldenteam",
             "title": "kontakt",
             "subtitle": "Zadzwoń",
-            "url": "/images/phix-6.jpg"
+            "url": "/tales/tales-goldenteam-6.jpg"
         },
         {
             "id": 7,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-7.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-7.jpg"
         },
         {
             "id": 8,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-8.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-8.jpg"
         },
         {
             "id": 9,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-9.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-9.jpg"
         },
         {
             "id": 10,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-10.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-10.jpg"
         },
         {
             "id": 11,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-11.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-11.jpg"
         },
         {
             "id": 12,
             "category": "digital",
             "subcategory": "still",
-            "client": "phix",
-            "url": "/images/phix-12.jpg"
+            "tale": "goldenteam",
+            "url": "/tales/tales-goldenteam-12.jpg"
         },
         {
             "id": 13,
