@@ -12,7 +12,6 @@ const TalesArticle = () => {
     AOS.init();
   }, []);
 
-  console.log(talesData.items.slice(1, talesData.items.length));
   return (
     <React.Fragment>
       <div className='tales-article'>
@@ -22,7 +21,9 @@ const TalesArticle = () => {
             data-aos-duration='1000'
             data-aos-easing='ease-in-out'
             data-aos='zoom-in'
-            src={talesData.items[0].url}
+            src={
+              talesData.items.filter((x) => x.title === 'Golden Team')[0].url
+            }
             alt='image-article'
           />
           <article
@@ -33,7 +34,7 @@ const TalesArticle = () => {
           >
             There will be a focus on the skills required to sustain a career,
             from developing and managing standout projects, via marketing,
-            fundraising and evaluation
+            fundraising and evaluation.
           </article>
         </div>
         {talesData.items

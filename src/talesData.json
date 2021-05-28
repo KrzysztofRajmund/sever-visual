@@ -2,6 +2,7 @@
     "items": [
         {
             "id": 1,
+            "title": "Golden Team",
             "category": "digital",
             "subcategory": "still",
             "tale": "goldenteam",

@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom';
 //assets
 import DigitalImageThree from '../../assets/digital-image3.JPG';
 import DigitalImageTwo from '../../assets/digital-image2.jpg';
+//tales data
+import talesData from '../../talesData.json';
 
 const Tales = () => {
   const [loading, setLoading] = useState(false);
@@ -29,7 +31,12 @@ const Tales = () => {
           {/* hr */}
           <hr className='tales__hr' />
           <Link to='2015' duration={650} spy={true} smooth={true} offset={0}>
-            <div>Nasty Gal Campaign</div>
+            <div>
+              {
+                talesData.items.filter((x) => x.title === 'Golden Team')[0]
+                  .title
+              }
+            </div>
           </Link>
         </article>
         <article className='tales__nav-article'>
@@ -84,7 +91,10 @@ const Tales = () => {
 
           <div className='tales__article-text'>
             {' '}
-            I am article 2015<NavLink to='/tales/2015'>read more...</NavLink>
+            There will be a focus on the skills required to sustain a career,
+            from developing and managing standout projects, via marketing,
+            fundraising and evaluation.
+            <NavLink to='/tales/2015'>[read more...]</NavLink>
           </div>
         </article>
         <article className='tales__article' id='2017'>
