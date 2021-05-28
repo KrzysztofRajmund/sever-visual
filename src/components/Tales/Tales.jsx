@@ -2,6 +2,7 @@ import React, { useState, UseEffect } from 'react';
 //react-scroll
 import { Link } from 'react-scroll';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 //assets
 import DigitalImageThree from '../../assets/digital-image3.JPG';
 import DigitalImageTwo from '../../assets/digital-image2.jpg';
@@ -83,7 +84,7 @@ const Tales = () => {
 
           <div className='tales__article-text'>
             {' '}
-            I am article 2015<a href='/tales/2015'>read more...</a>
+            I am article 2015<NavLink to='/tales/2015'>read more...</NavLink>
           </div>
         </article>
         <article className='tales__article' id='2017'>
